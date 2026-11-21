@@ -4,32 +4,36 @@
 
 ## 1. Overall direction
 
-Create a dark, modern, premium, minimal engineering portfolio for Ivin Sunny. The site should feel professionally composed and specific to an engineer's work rather than like a generic developer template.
+Create a sophisticated, modern, editorial-style software engineer portfolio for Ivin Sunny, using a restrained blue and neutral palette. The site should feel clean, intentional, human-designed, and specific to an engineer's work rather than like a generic developer template.
 
-- Use deep charcoal or near-black backgrounds, off-white primary text, and muted grey supporting text.
-- Use electric violet as the primary accent. Keep gradients, borders, shadows, and card treatments restrained.
-- Establish clear visual hierarchy through typography, spacing, and layout rather than decorative effects.
-- Keep the presentation polished and technical while leaving enough visual space for project details and owner-provided media.
+- Use generous whitespace, strong typography, clear hierarchy, and well-balanced layouts.
+- Use blue selectively rather than making every section blue. Balance navy accents with off-white and neutral surfaces.
+- Keep borders, shadows, and rounded corners restrained. Use visual treatments to support content, not compete with it.
+- Present professional experience and projects clearly, with enough room for descriptions and owner-provided media.
 - Use the portfolio content document as the source of truth for personal and professional facts. Do not add unconfirmed information.
 
-## 2. Suggested color palette
+## 2. Visual philosophy and color palette
 
-These HEX values are the initial design recommendation for implementation and can be tuned during visual review. Use the accent selectively for actions, links, focus indicators, and small highlights.
+Use the supplied HEX values as the visual palette. Deep navy can anchor selected areas such as the hero or footer; keep the overall page balanced and avoid making every section blue. Use primary blue for prominent interactive elements and accent blue sparingly for small highlights. Pair light surfaces with primary text, and dark navy surfaces with off-white text. Verify contrast for every final combination and do not rely on color alone to communicate meaning.
 
-| Role | Suggested color | HEX |
+| Role | Color | HEX |
 | --- | --- | --- |
-| Main page background | Deep charcoal | `#0B0D12` |
-| Alternate section background | Dark blue-charcoal | `#10131A` |
-| Card / raised surface | Charcoal | `#151923` |
-| Primary text | Warm off-white | `#F4F5F7` |
-| Secondary text | Muted grey | `#A4AAB6` |
-| Subtle text | Cool grey | `#7C8492` |
-| Border / divider | Low-contrast slate | `#292E3A` |
-| Primary accent | Electric violet | `#8B5CF6` |
-| Accent highlight | Soft violet | `#A78BFA` |
-| Optional secondary accent | Electric blue | `#5B8CFF` |
+| Dark anchor surface | Deep navy | `#101F35` |
+| Primary blue | Blue | `#234C78` |
+| Accent blue | Blue | `#4B83B8` |
+| Light surface / text on dark surfaces | Off-white | `#F4F6F8` |
+| Primary text on light surfaces | Dark neutral | `#252D38` |
 
-Use violet as the consistent primary accent. Use the optional blue sparingly, only where it improves distinction or supports a restrained gradient. Check final foreground/background combinations for accessible contrast; do not rely on color alone to communicate meaning.
+Use `#234C78` for blue interactive emphasis where contrast permits. Use `#4B83B8` selectively for accents, and check text contrast before using it for small text on light surfaces. Do not introduce additional palette colors without approval.
+
+### Avoid
+
+- Excessive gradients or glowing effects.
+- Glassmorphism as a repeated visual treatment.
+- Floating decorative shapes.
+- AI-generated illustrations.
+- Excessive animations or unnecessary visual effects.
+- Generic template-like layouts.
 
 ## 3. Typography
 
@@ -45,8 +49,8 @@ Use violet as the consistent primary accent. Use the optional blue sparingly, on
 - Use a consistent 4px base spacing scale, with common spacing steps such as 8, 12, 16, 24, 32, 48, 64, and 96px.
 - Use a centered content container with a suggested maximum width of about 1120–1200px and responsive horizontal padding (about 24px desktop, 20px tablet, and 16px mobile).
 - Give major sections generous vertical separation: approximately 88–120px on desktop and 64–80px on mobile, adjusted to content density.
-- Use subtle 1px borders and modest corner radii on cards and controls. Avoid excessive nested panels, heavy shadows, or repeated decorative gradients.
-- Use gradients sparingly as low-contrast background accents, never behind text in a way that reduces legibility.
+- Use subtle borders, restrained shadows, and modest corner radii on cards and controls. Avoid excessive nested panels or decorative effects.
+- Keep surfaces clean and editorial; use whitespace and alignment to distinguish sections before adding boxes or decoration.
 
 ## 5. Homepage structure
 
@@ -96,7 +100,7 @@ Use clear section headings and enough separation that each area can be found by 
 ### Hero
 
 - Present the owner's introduction and professional positioning prominently, using approved wording from `docs/portfolio-content.md`.
-- Include a professional profile photograph only after the owner supplies it; the current asset is TODO.
+- Use the owner-provided profile photograph at `public/images/profile/profile.jpeg` (served at `/images/profile/profile.jpeg`).
 - Provide clear calls to action for featured projects and resume download. The resume path in the content source is `/files/resume.pdf`.
 - Include GitHub and LinkedIn links from the content source.
 - Use strong typography and a polished responsive layout without inventing a tagline or adding unsupported claims.
@@ -111,9 +115,9 @@ Use clear section headings and enough separation that each area can be found by 
 
 Present the following three projects: SustainAI, Smart Home Energy Optimization System, and Virtual Mouse Using Hand Gestures.
 
-- Use only actual screenshots or other project media supplied by the owner. Do not create or imply real project imagery before it is provided.
+- Use only actual screenshots or other project media supplied by the owner. Current screenshots are listed in `docs/portfolio-content.md`; Virtual Mouse screenshots remain TODO.
 - Include concise descriptions and technology lists from the content source.
-- Display repository, demo, or documentation links only after the owner provides them; current asset links are TODO and must not be rendered as functional links.
+- Display the verified repository links in `docs/portfolio-content.md`. Demo and documentation links remain TODO and must not be rendered as functional links unless the owner provides them.
 - Give each project enough visual space to communicate its technical complexity without inventing metrics or outcomes.
 
 ### Skills, education, achievements, and certifications
@@ -130,7 +134,7 @@ Present the following three projects: SustainAI, Smart Home Energy Optimization 
 
 ## 8. Interaction and motion
 
-- Use Framer Motion selectively for subtle section entrance, button, and project-card interactions where it improves feedback or pacing.
+- Use Framer Motion sparingly for subtle section entrances, transitions, and hover interactions.
 - Prefer short, low-distance transitions and restrained opacity or transform changes. Avoid continuous motion, parallax-heavy effects, distracting effects, or animation that delays access to content.
 - Provide smooth in-page scrolling where supported, while preserving browser navigation and keyboard behavior.
 - Respect `prefers-reduced-motion`; reduce or remove nonessential movement when requested by the user system setting.
@@ -156,9 +160,12 @@ Present the following three projects: SustainAI, Smart Home Energy Optimization 
 
 ## 11. Assets and open items
 
-- **Profile photograph:** TODO — owner will provide a professional photograph.
-- **Project screenshots and work samples:** TODO — use only owner-provided assets.
-- **Project repository, demo, and documentation links:** TODO — use only owner-confirmed links.
+- **Profile photograph:** `public/images/profile/profile.jpeg` — owner-provided.
+- **SustainAI screenshots:** `public/images/projects/sustainai/dashboard.png`, `public/images/projects/sustainai/chat-interface.png`.
+- **Smart Home screenshots:** `public/images/projects/smart-home/dashboard.png`, `public/images/projects/smart-home/energy-forecast.png`.
+- **Virtual Mouse screenshots:** TODO — no screenshot files have been supplied.
+- **Project repository links:** Use the verified links listed in `docs/portfolio-content.md`.
+- **Project demos, additional documentation, and experience work samples:** TODO — use only owner-confirmed links and owner-provided assets.
 - **Phone number visibility:** TODO — owner confirmation is required before display.
 
-Until these items are supplied or confirmed, leave their visual slots absent or clearly nonfunctional in any future draft; do not fabricate content or links.
+Until remaining TODO items are supplied or confirmed, leave their visual slots absent or clearly nonfunctional in any future draft; do not fabricate content, assets, or links.
