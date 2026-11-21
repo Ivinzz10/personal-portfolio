@@ -12,8 +12,8 @@
 - **Email:** ivinsunny10@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/ivinsunny
 - **GitHub:** https://github.com/Ivinzz10
-- **Profile photo:** TODO — owner will provide a professional photograph.
-- **Resume:** `/files/resume.pdf`
+- **Profile photo:** `public/images/profile/profile.jpeg` (served at `/images/profile/profile.jpeg`).
+- **Resume:** `public/files/resume.pdf` (served at `/files/resume.pdf`).
 
 ## 2. Professional Introduction
 
@@ -92,8 +92,8 @@ Python, Flask, Ollama, YOLO, SQLite, Matplotlib, HTML, CSS, JavaScript.
 
 #### Project Assets
 
-- **GitHub repository:** TODO
-- **Project screenshots:** TODO
+- **GitHub repository:** https://github.com/Ivinzz10/Sustain_AI
+- **Project screenshots:** `public/images/projects/sustainai/dashboard.png`, `public/images/projects/sustainai/chat-interface.png`
 - **Live demonstration:** TODO
 - **Additional documentation:** TODO
 
@@ -120,9 +120,9 @@ Python, TensorFlow, Firebase, ESP32, Pandas.
 
 #### Project Assets
 
-- **GitHub repository:** TODO
+- **GitHub repository:** https://github.com/Ivinzz10/Smart_Energy_Management_System
 - **System architecture diagram:** TODO
-- **Dashboard screenshots:** TODO
+- **Dashboard screenshots:** `public/images/projects/smart-home/dashboard.png`, `public/images/projects/smart-home/energy-forecast.png`
 - **Model results and visualizations:** TODO
 - **Live demonstration:** TODO
 
@@ -149,7 +149,7 @@ Python, OpenCV, MediaPipe, PyAutoGUI, Tkinter.
 
 #### Project Assets
 
-- **GitHub repository:** TODO
+- **GitHub repository:** https://github.com/Ivinzz10/Virtual_Mouse
 - **Application screenshots:** TODO
 - **Demo video:** TODO
 
