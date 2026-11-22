@@ -172,3 +172,59 @@ export const featuredProjects = [
     images: [],
   },
 ] as const;
+
+export const technicalSkillGroups = [
+  {
+    category: "Programming Languages",
+    skills: ["Python", "Java", "C", "JavaScript", "SQL"],
+  },
+  {
+    category: "Web Development",
+    skills: ["HTML", "CSS", "React", "Flask", "Node.js", "REST APIs"],
+  },
+  {
+    category: "Artificial Intelligence and Machine Learning",
+    skills: ["Machine Learning", "Large Language Models (LLMs)", "AI Agents", "TensorFlow", "Pandas", "YOLO"],
+  },
+  {
+    category: "Databases",
+    skills: ["MySQL", "PostgreSQL", "SQLite", "Firebase"],
+  },
+  {
+    category: "Developer Tools",
+    skills: ["Git", "GitHub", "Ollama", "Docker Compose", "CLI"],
+  },
+  {
+    category: "Core Computer Science",
+    skills: [
+      "Data Structures and Algorithms",
+      "Object-Oriented Programming",
+      "Database Management Systems",
+      "Software Development Life Cycle",
+    ],
+  },
+] as const;
+
+export const educationHistory = [
+  {
+    qualification: "B.Tech — Computer Science and Engineering",
+    institution: "Vimal Jyothi Engineering College",
+    duration: "2022–2026",
+    resultLabel: "CGPA",
+    result: "8.59/10",
+  },
+  {
+    qualification: "Senior Secondary — Class XII (CBSE)",
+    institution: "St. Antony's Public School",
+    duration: "2022",
+    resultLabel: "Percentage",
+    result: "87.8%",
+  },
+  {
+    qualification: "Secondary School — Class X",
+    institution: "Sree Sankara Vidyapeetam",
+    duration: "2020",
+    resultLabel: "Percentage",
+    result: "90.6%",
+  },
+] as const;
