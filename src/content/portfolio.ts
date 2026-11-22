@@ -73,3 +73,102 @@ export const professionalExperience = [
     current: false,
   },
 ] as const;
+
+export const featuredProjects = [
+  {
+    number: "01",
+    name: "SustainAI",
+    subtitle: "AI-Powered Waste Disposal Management System",
+    dates: "May 2026 – June 2026",
+    purpose:
+      "A waste-disposal management system centered on environmental analysis, web research, and waste classification.",
+    approach:
+      "A multi-agent AI system with a master orchestrator coordinating specialized agents for environmental analysis, web research, waste classification, visualization, and summarization.",
+    contributions: [
+      "Developed a master orchestrator to coordinate specialized AI agents.",
+      "Integrated Ollama-based LLMs and YOLO computer vision.",
+      "Integrated environmental APIs to retrieve relevant environmental data.",
+      "Implemented waste image analysis and actionable insight generation.",
+      "Built a Flask backend with automated HTML dashboard generation.",
+      "Implemented concurrent agent execution and session-based context.",
+      "Developed interactive environmental intelligence reporting.",
+    ],
+    technologies: [
+      "Python",
+      "Flask",
+      "Ollama",
+      "YOLO",
+      "SQLite",
+      "Matplotlib",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+    repository: "https://github.com/Ivinzz10/Sustain_AI",
+    images: [
+      {
+        src: "/images/projects/sustainai/dashboard.png",
+        alt: "SustainAI environmental analysis and waste-risk dashboard.",
+        caption: "Environmental intelligence dashboard",
+        aspectRatio: "2 / 1",
+      },
+      {
+        src: "/images/projects/sustainai/chat-interface.png",
+        alt: "SustainAI chat interface for waste-disposal questions.",
+        caption: "Chat interface",
+        aspectRatio: "2 / 1",
+      },
+    ],
+  },
+  {
+    number: "02",
+    name: "Smart Home Energy Optimization System",
+    subtitle: "IoT-Based Energy Monitoring and LSTM Forecasting",
+    dates: "October 2025 – March 2026",
+    purpose:
+      "An IoT-based system for real-time appliance energy monitoring and energy-consumption forecasting.",
+    approach:
+      "ESP32 devices monitor appliance energy use, a Firebase dashboard visualizes consumption, and an LSTM model forecasts energy consumption from time-series data.",
+    contributions: [
+      "Developed an appliance energy monitoring system using ESP32.",
+      "Built a Firebase dashboard to visualize energy consumption.",
+      "Processed time-series energy data for machine learning.",
+      "Developed an LSTM-based forecasting model for energy consumption prediction.",
+    ],
+    technologies: ["Python", "TensorFlow", "Firebase", "ESP32", "Pandas"],
+    repository: "https://github.com/Ivinzz10/Smart_Energy_Management_System",
+    images: [
+      {
+        src: "/images/projects/smart-home/dashboard.png",
+        alt: "Smart home dashboard showing appliance monitoring and power consumption.",
+        caption: "Appliance monitoring dashboard",
+        aspectRatio: "2 / 1",
+      },
+      {
+        src: "/images/projects/smart-home/energy-forecast.png",
+        alt: "Smart home energy forecast view with usage and appliance summaries.",
+        caption: "Energy forecasting view",
+        aspectRatio: "2.35 / 1",
+      },
+    ],
+  },
+  {
+    number: "03",
+    name: "Virtual Mouse Using Hand Gestures",
+    subtitle: "Computer Vision-Based Virtual Mouse",
+    dates: "December 2024 – March 2025",
+    purpose:
+      "A virtual mouse that supports cursor movement, clicking, scrolling, and screenshot operations using hand gestures.",
+    approach:
+      "Implemented real-time hand tracking and gesture recognition to enable mouse interaction through hand gestures.",
+    contributions: [
+      "Implemented real-time hand tracking.",
+      "Developed gesture recognition functionality.",
+      "Enabled cursor movement and mouse interaction using hand gestures.",
+      "Integrated clicking, scrolling, and screenshot operations.",
+    ],
+    technologies: ["Python", "OpenCV", "MediaPipe", "PyAutoGUI", "Tkinter"],
+    repository: "https://github.com/Ivinzz10/Virtual_Mouse",
+    images: [],
+  },
+] as const;
