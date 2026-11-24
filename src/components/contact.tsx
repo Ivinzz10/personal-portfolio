@@ -6,16 +6,16 @@ export function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="scroll-mt-20 bg-[#234C78] text-[#F4F6F8]"
+      className="scroll-mt-20 bg-[#101F35] text-[#F4F6F8]"
     >
       <div className="mx-auto grid max-w-[1200px] gap-8 px-4 py-16 sm:px-5 sm:py-20 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-end md:gap-14 md:py-24 lg:gap-20 lg:px-6">
         <header>
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#F4F6F8]/80">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#F4F6F8]/65">
             Contact
           </p>
           <h2
             id="contact-title"
-            className="text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl"
+            className="text-4xl font-semibold leading-tight tracking-[-0.055em] sm:text-5xl"
           >
             Get in touch
           </h2>
@@ -27,16 +27,17 @@ export function Contact() {
         <ul className="grid gap-2 sm:grid-cols-2 sm:gap-3">
           <li className="sm:col-span-2">
             <a
-              className="flex min-h-16 items-center gap-3 rounded-md bg-[#F4F6F8] px-4 py-4 text-base font-semibold text-[#101F35] transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F4F6F8] motion-reduce:transition-none sm:px-5 sm:text-lg"
+              className="group flex min-h-16 items-center justify-between gap-3 border border-[#F4F6F8]/25 bg-[#234C78] px-4 py-4 text-base font-semibold text-[#F4F6F8] transition-colors hover:border-[#4B83B8] hover:bg-[#234C78]/80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F4F6F8] motion-reduce:transition-none sm:px-5 sm:text-lg"
               href={`mailto:${portfolioIdentity.email}`}
             >
-              <Mail aria-hidden="true" size={19} className="shrink-0 text-[#234C78]" />
+              <Mail aria-hidden="true" size={19} className="shrink-0 text-[#F4F6F8]/75" />
               <span className="break-all">{portfolioIdentity.email}</span>
+              <ArrowUpRight aria-hidden="true" size={19} className="shrink-0 text-[#F4F6F8]/70 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 motion-reduce:transition-none" />
             </a>
           </li>
           <li>
             <a
-              className="flex min-h-12 items-center justify-between gap-3 border-b border-[#F4F6F8]/30 py-3 text-sm font-medium text-[#F4F6F8]/90 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F4F6F8] sm:text-base"
+              className="flex min-h-12 items-center justify-between gap-3 border-b border-[#F4F6F8]/25 py-3 text-sm font-medium text-[#F4F6F8]/85 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F4F6F8] motion-reduce:transition-none sm:text-base"
               href={portfolioIdentity.linkedin}
               target="_blank"
               rel="noreferrer"
@@ -48,7 +49,7 @@ export function Contact() {
           </li>
           <li>
             <a
-              className="flex min-h-12 items-center justify-between gap-3 border-b border-[#F4F6F8]/30 py-3 text-sm font-medium text-[#F4F6F8]/90 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F4F6F8] sm:text-base"
+              className="flex min-h-12 items-center justify-between gap-3 border-b border-[#F4F6F8]/25 py-3 text-sm font-medium text-[#F4F6F8]/85 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F4F6F8] motion-reduce:transition-none sm:text-base"
               href={portfolioIdentity.github}
               target="_blank"
               rel="noreferrer"

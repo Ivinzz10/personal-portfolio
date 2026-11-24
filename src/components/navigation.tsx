@@ -27,10 +27,10 @@ export function Navigation() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#252D38]/10 bg-[#F4F6F8]">
+    <header className="sticky top-0 z-50 border-b border-[#4B83B8]/30 bg-[#101F35] text-[#F4F6F8] shadow-[0_8px_24px_rgba(16,31,53,0.12)]">
       <div className="mx-auto flex min-h-16 max-w-[1200px] items-center justify-between gap-6 px-4 sm:px-5 md:min-h-20 lg:px-6">
         <a
-          className="group shrink-0 rounded-sm text-[#252D38] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8]"
+          className="group shrink-0 rounded-sm text-[#F4F6F8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8]"
           href="#home"
           onClick={closeMenu}
           aria-label={`${portfolioIdentity.name}, home`}
@@ -44,7 +44,7 @@ export function Navigation() {
           {portfolioSections.map((section) => (
             <a
               key={section.href}
-              className="rounded-sm py-2 text-sm font-medium text-[#252D38] transition-colors hover:text-[#234C78] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:transition-none"
+              className="rounded-sm py-2 text-sm font-medium text-[#F4F6F8]/80 transition-colors hover:text-white hover:underline hover:decoration-[#4B83B8] hover:underline-offset-8 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:transition-none"
               href={section.href}
             >
               {section.label}
@@ -55,7 +55,7 @@ export function Navigation() {
         <button
           ref={menuButtonRef}
           type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-md border border-[#234C78]/25 px-3 text-sm font-semibold text-[#234C78] transition-colors hover:bg-[#234C78]/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:transition-none lg:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-md border border-[#F4F6F8]/30 px-3 text-sm font-semibold text-[#F4F6F8] transition-colors hover:border-[#4B83B8] hover:bg-[#F4F6F8]/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:transition-none lg:hidden"
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
@@ -70,13 +70,13 @@ export function Navigation() {
         id="mobile-navigation"
         aria-label="Mobile navigation"
         hidden={!isMenuOpen}
-        className="border-t border-[#252D38]/10 px-4 py-3 sm:px-5 lg:hidden"
+        className="border-t border-[#F4F6F8]/15 bg-[#101F35] px-4 py-3 sm:px-5 lg:hidden"
       >
         <ul className="mx-auto grid max-w-[1200px] grid-cols-2 gap-1 sm:grid-cols-3">
           {portfolioSections.map((section) => (
             <li key={section.href}>
               <a
-                className="flex min-h-11 items-center rounded-sm px-3 text-sm font-medium text-[#252D38] hover:bg-[#234C78]/5 hover:text-[#234C78] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#4B83B8]"
+                className="flex min-h-11 items-center rounded-sm px-3 text-sm font-medium text-[#F4F6F8]/85 hover:bg-[#234C78] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#4B83B8]"
                 href={section.href}
                 onClick={closeMenu}
               >

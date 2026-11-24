@@ -7,13 +7,16 @@ export function Hero() {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className="scroll-mt-20 bg-[#101F35] text-[#F4F6F8] max-md:scroll-mt-16"
+      className="hero-surface relative isolate scroll-mt-20 overflow-hidden bg-[#101F35] text-[#F4F6F8] max-md:scroll-mt-16"
     >
       <div className="mx-auto flex max-w-[1200px] flex-col gap-0 px-4 py-10 sm:px-5 md:grid md:items-center md:gap-14 md:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(300px,0.8fr)] lg:gap-20 lg:px-6 lg:py-24">
         <div className="max-w-[680px] max-md:contents">
+          <p className="order-0 mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#F4F6F8]/70 max-md:text-center md:mb-4 md:text-sm">
+            {portfolioIdentity.designation}
+          </p>
           <h1
             id="hero-title"
-            className="order-1 text-[clamp(3.25rem,8vw,6rem)] font-semibold leading-[0.98] tracking-[-0.065em] text-[#F4F6F8] max-md:text-center max-md:text-[3rem]"
+            className="order-1 text-[clamp(3.5rem,8vw,6.75rem)] font-semibold leading-[0.92] tracking-[-0.07em] text-[#F4F6F8] max-md:text-center max-md:text-[3rem]"
           >
             {portfolioIdentity.name}
           </h1>
@@ -70,8 +73,12 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="order-2 mx-auto mt-4 w-full max-w-[340px] lg:max-w-[420px] max-md:mt-3 max-md:max-w-[170px] md:order-none md:mt-0">
-          <div className="relative aspect-[0.76] overflow-hidden rounded-sm border border-[#F4F6F8]/15 bg-[#F4F6F8] shadow-[0_24px_60px_rgba(16,31,53,0.18)] max-md:aspect-[732/1000]">
+        <div className="relative order-2 mx-auto mt-4 w-full max-w-[340px] lg:max-w-[420px] max-md:mt-3 max-md:max-w-[170px] md:order-none md:mt-0">
+          <div
+            aria-hidden="true"
+            className="absolute -right-3 -top-3 z-0 aspect-[0.76] w-full border border-[#4B83B8]/70 max-md:aspect-[732/1000]"
+          />
+          <div className="relative z-10 aspect-[0.76] overflow-hidden border border-[#F4F6F8]/20 bg-[#EAF0F6] shadow-[0_24px_60px_rgba(0,0,0,0.25)] max-md:aspect-[732/1000]">
             <Image
               src={portfolioIdentity.profileImage}
               alt="Portrait of Ivin Sunny"

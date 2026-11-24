@@ -5,29 +5,36 @@ export function Skills() {
     <section
       id="skills"
       aria-labelledby="skills-title"
-      className="scroll-mt-20 border-t border-[#252D38]/10 bg-[#F4F6F8]"
+      className="scroll-mt-20 bg-[#EAF0F6] text-[#252D38]"
     >
-      <div className="mx-auto grid max-w-[1200px] gap-9 px-4 py-16 sm:px-5 sm:py-20 md:grid-cols-[minmax(190px,0.65fr)_minmax(0,1.35fr)] md:gap-14 md:py-24 lg:gap-20 lg:px-6">
-        <header>
+      <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-5 sm:py-20 md:py-24 lg:px-6">
+        <header className="mb-9 max-w-[700px] sm:mb-12">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#234C78]">
             Skills
           </p>
           <h2
             id="skills-title"
-            className="text-3xl font-semibold leading-tight tracking-[-0.045em] text-[#252D38] sm:text-4xl"
+            className="text-4xl font-semibold leading-tight tracking-[-0.055em] text-[#101F35] sm:text-5xl"
           >
             Technical skills
           </h2>
         </header>
 
-        <dl className="grid gap-x-8 gap-y-7 sm:grid-cols-2 sm:gap-y-9">
+        <dl className="grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2 sm:gap-y-9 lg:grid-cols-3 lg:gap-x-10">
           {technicalSkillGroups.map((group) => (
-            <div key={group.category} className="border-t border-[#252D38]/15 pt-4">
-              <dt className="text-base font-semibold leading-6 text-[#252D38]">
+            <div key={group.category} className="border-t border-[#234C78]/20 pt-4">
+              <dt className="text-base font-semibold leading-6 text-[#101F35]">
                 {group.category}
               </dt>
-              <dd className="mt-2 text-sm leading-6 text-[#252D38]/80 sm:text-base sm:leading-7">
-                {group.skills.join(" · ")}
+              <dd className="mt-3 flex flex-wrap gap-x-2 gap-y-2">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="border border-[#234C78]/25 bg-[#F4F6F8]/60 px-2.5 py-1 text-sm leading-6 text-[#252D38]"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </dd>
             </div>
           ))}

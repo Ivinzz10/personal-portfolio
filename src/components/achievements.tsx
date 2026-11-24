@@ -25,22 +25,27 @@ export function Achievements() {
         </header>
 
         <div className="grid gap-x-10 gap-y-7 md:grid-cols-2 md:gap-y-9">
-          {achievementHighlights.map((achievement) => (
+          {achievementHighlights.map((achievement, index) => (
             <article
               key={achievement.title}
-              className="border-t-2 border-[#4B83B8] pt-4 sm:pt-5"
+              className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 border-t-2 border-[#4B83B8] bg-[#234C78] p-5 sm:gap-x-6 sm:p-7"
             >
-              <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#F4F6F8] sm:text-2xl">
-                {achievement.title}
-              </h3>
-              <p className="mt-2 max-w-[42ch] text-sm leading-6 text-[#F4F6F8]/80 sm:text-base sm:leading-7">
-                {achievement.detail}
-              </p>
+              <span aria-hidden="true" className="pt-1 text-sm font-medium tracking-[0.12em] text-[#F4F6F8]/60">
+                0{index + 1}
+              </span>
+              <div>
+                <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[#F4F6F8] sm:text-3xl">
+                  {achievement.title}
+                </h3>
+                <p className="mt-2 max-w-[42ch] text-sm leading-6 text-[#F4F6F8]/85 sm:text-base sm:leading-7">
+                  {achievement.detail}
+                </p>
+              </div>
             </article>
           ))}
         </div>
 
-        <ul className="mt-9 space-y-4 border-t border-[#F4F6F8]/20 pt-6 sm:mt-11 sm:space-y-5 sm:pt-7">
+        <ul className="mt-9 grid gap-x-10 gap-y-4 border-t border-[#F4F6F8]/20 pt-6 sm:mt-11 sm:grid-cols-2 sm:gap-y-5 sm:pt-7">
           {additionalAchievements.map((achievement) => (
             <li
               key={achievement}
@@ -58,7 +63,7 @@ export function Achievements() {
         <section
           id="certifications"
           aria-labelledby="certifications-title"
-          className="mt-14 rounded-lg bg-[#F4F6F8] px-5 py-7 text-[#252D38] sm:mt-16 sm:px-8 sm:py-9"
+          className="mt-14 border-t-2 border-[#4B83B8] bg-[#EAF0F6] px-5 py-7 text-[#252D38] sm:mt-16 sm:px-8 sm:py-9"
         >
           <header className="mb-6">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.13em] text-[#234C78]">
