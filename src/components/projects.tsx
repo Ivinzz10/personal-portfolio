@@ -244,21 +244,24 @@ export function Projects() {
           <SectionReveal>
             <ProjectHeading project={virtualMouse} id="virtual-mouse-title" dark />
           </SectionReveal>
-          <div className="mt-8 grid gap-8 lg:mt-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
-            <SectionReveal className="space-y-5 text-sm leading-6 text-[#F4F6F8]/85 sm:text-base sm:leading-7" delay={0.06}>
-              <div>
-                <h4 className="mb-1 font-semibold text-[#F4F6F8]">Problem addressed</h4>
-                <p>{virtualMouse.purpose}</p>
-              </div>
-              <div>
-                <h4 className="mb-1 font-semibold text-[#F4F6F8]">Solution</h4>
-                <p>{virtualMouse.approach}</p>
-              </div>
-            </SectionReveal>
-            <SectionReveal className="border-l border-[#4B83B8]/60 pl-5 sm:pl-7" delay={0.12}>
-              <h4 className="mb-3 font-semibold text-[#F4F6F8]">Contributions</h4>
-              <Contributions items={virtualMouse.contributions} dark />
-            </SectionReveal>
+          <div className="mt-8 grid gap-8 lg:mt-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
+            <ProjectScreenshot image={virtualMouse.images[0]} />
+            <div className="min-w-0 space-y-6">
+              <SectionReveal className="space-y-5 text-sm leading-6 text-[#F4F6F8]/85 sm:text-base sm:leading-7" delay={0.06}>
+                <div>
+                  <h4 className="mb-1 font-semibold text-[#F4F6F8]">Problem addressed</h4>
+                  <p>{virtualMouse.purpose}</p>
+                </div>
+                <div>
+                  <h4 className="mb-1 font-semibold text-[#F4F6F8]">Solution</h4>
+                  <p>{virtualMouse.approach}</p>
+                </div>
+              </SectionReveal>
+              <SectionReveal className="border-l border-[#4B83B8]/60 pl-5 sm:pl-7" delay={0.12}>
+                <h4 className="mb-3 font-semibold text-[#F4F6F8]">Contributions</h4>
+                <Contributions items={virtualMouse.contributions} dark />
+              </SectionReveal>
+            </div>
           </div>
           <SectionReveal delay={0.18}>
             <TechnologyList technologies={virtualMouse.technologies} dark />

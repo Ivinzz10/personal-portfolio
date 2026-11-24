@@ -189,7 +189,14 @@ export const featuredProjects = [
     ],
     technologies: ["Python", "OpenCV", "MediaPipe", "PyAutoGUI", "Tkinter"],
     repository: "https://github.com/Ivinzz10/Virtual_Mouse",
-    images: [],
+    images: [
+      {
+        src: "/images/projects/virtual-mouse/app-interface.png",
+        alt: "Virtual Mouse desktop application interface showing Start, Stop, Help, Settings, and smoothing controls.",
+        caption: "Virtual Mouse desktop application interface",
+        aspectRatio: "970 / 768",
+      },
+    ],
   },
 ] as const;
 
