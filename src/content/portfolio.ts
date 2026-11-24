@@ -2,6 +2,7 @@ export const portfolioIdentity = {
   name: "Ivin Sunny",
   designation: "Junior Software Engineer",
   location: "Kannur, Kerala, India",
+  email: "ivinsunny10@gmail.com",
   github: "https://github.com/Ivinzz10",
   linkedin: "https://www.linkedin.com/in/ivinsunny",
   resume: "/files/resume.pdf",
@@ -226,5 +227,33 @@ export const educationHistory = [
     duration: "2020",
     resultLabel: "Percentage",
     result: "90.6%",
+  },
+] as const;
+
+export const achievementHighlights = [
+  {
+    title: "GATE 2026",
+    detail: "Qualified GATE 2026 in Computer Science and Information Technology.",
+  },
+  {
+    title: "SAP Hackfest 2025",
+    detail: "Won the regional round and qualified for the State-Hub Round.",
+  },
+] as const;
+
+export const additionalAchievements = [
+  "Participated in FlowZint AI Hackathon 2026.",
+  "Participated in Shaastra Techathon 2024 (IIT Madras).",
+  "Served as Computer Science Department Head Coordinator and Website Developer for the college Techfest.",
+] as const;
+
+export const certifications = [
+  {
+    name: "Google Cloud Data Analytics (Virtual)",
+    description: "BigQuery, Dataflow, SQL, ETL.",
+  },
+  {
+    name: "Learn SAP ABAP by Doing (Udemy)",
+    description: "SAP ABAP Programming Fundamentals.",
   },
 ] as const;
