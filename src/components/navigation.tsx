@@ -6,7 +6,34 @@ import { portfolioIdentity, portfolioSections } from "@/content/portfolio";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const sectionIds = portfolioSections.map(({ href }) => href.slice(1));
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const activeEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+
+        if (activeEntry) {
+          const nextActiveSection = `#${activeEntry.target.id}`;
+          setActiveSection((current) =>
+            current === nextActiveSection ? current : nextActiveSection,
+          );
+        }
+      },
+      { rootMargin: "-20% 0px -70% 0px", threshold: 0 },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -44,7 +71,12 @@ export function Navigation() {
           {portfolioSections.map((section) => (
             <a
               key={section.href}
-              className="rounded-sm py-2 text-sm font-medium text-[#F4F6F8]/80 transition-colors hover:text-white hover:underline hover:decoration-[#4B83B8] hover:underline-offset-8 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:transition-none"
+              aria-current={activeSection === section.href ? "location" : undefined}
+              className={`relative rounded-sm py-2 text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:bg-[#4B83B8] after:transition-transform after:duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:after:transition-none ${
+                activeSection === section.href
+                  ? "text-white after:scale-x-100"
+                  : "text-[#F4F6F8]/80 after:scale-x-0 hover:text-white hover:after:scale-x-100"
+              }`}
               href={section.href}
             >
               {section.label}
@@ -76,7 +108,12 @@ export function Navigation() {
           {portfolioSections.map((section) => (
             <li key={section.href}>
               <a
-                className="flex min-h-11 items-center rounded-sm px-3 text-sm font-medium text-[#F4F6F8]/85 hover:bg-[#234C78] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#4B83B8]"
+                aria-current={activeSection === section.href ? "location" : undefined}
+                className={`flex min-h-11 items-center rounded-sm px-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#4B83B8] ${
+                  activeSection === section.href
+                    ? "bg-[#234C78] text-white"
+                    : "text-[#F4F6F8]/85 hover:bg-[#234C78] hover:text-white"
+                }`}
                 href={section.href}
                 onClick={closeMenu}
               >

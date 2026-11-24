@@ -8,6 +8,7 @@ import { Education } from "@/components/education";
 import { Achievements } from "@/components/achievements";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { BackToTop, ScrollProgress } from "@/components/scroll-controls";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       >
         Skip to main content
       </a>
+      <ScrollProgress />
       <Navigation />
       <main id="main-content">
         <Hero />
@@ -30,6 +32,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

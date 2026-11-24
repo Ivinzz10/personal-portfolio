@@ -1,4 +1,5 @@
 import { professionalExperience } from "@/content/portfolio";
+import { SectionReveal } from "@/components/section-reveal";
 
 export function Experience() {
   return (
@@ -8,7 +9,7 @@ export function Experience() {
       className="scroll-mt-20 bg-[#F4F6F8]"
     >
       <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-5 sm:py-20 md:py-24 lg:px-6">
-        <div className="mb-10 max-w-[680px] sm:mb-14">
+        <SectionReveal className="mb-10 max-w-[680px] sm:mb-14">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#234C78]">
             Professional experience
           </p>
@@ -18,10 +19,10 @@ export function Experience() {
           >
             Experience
           </h2>
-        </div>
+        </SectionReveal>
 
         <ol className="space-y-10 border-l border-[#234C78]/25 sm:space-y-14">
-          {professionalExperience.map((experience) => (
+          {professionalExperience.map((experience, index) => (
             <li key={`${experience.organization}-${experience.role}`} className="relative pl-6 sm:pl-8">
               <span
                 aria-hidden="true"
@@ -30,13 +31,14 @@ export function Experience() {
                 }`}
               />
 
-              <article
-                className={`grid gap-5 md:grid-cols-[minmax(180px,0.55fr)_minmax(0,1.45fr)] md:gap-10 lg:gap-16 ${
-                  experience.current
-                    ? "bg-[#101F35] p-5 text-[#F4F6F8] sm:p-8"
-                    : "py-2"
-                }`}
-              >
+              <SectionReveal delay={index * 0.12}>
+                <article
+                  className={`grid gap-5 md:grid-cols-[minmax(180px,0.55fr)_minmax(0,1.45fr)] md:gap-10 lg:gap-16 ${
+                    experience.current
+                      ? "bg-[#101F35] p-5 text-[#F4F6F8] sm:p-8"
+                      : "py-2"
+                  }`}
+                >
                 <div>
                   <p className={`text-sm font-medium leading-6 ${experience.current ? "text-[#F4F6F8]" : "text-[#234C78]"}`}>
                     {experience.dates}
@@ -94,7 +96,8 @@ export function Experience() {
                     </div>
                   )}
                 </div>
-              </article>
+                </article>
+              </SectionReveal>
             </li>
           ))}
         </ol>

@@ -31,7 +31,7 @@ export async function Footer() {
             {portfolioSections.map((section) => (
               <li key={section.href}>
                 <a
-                  className="rounded-sm hover:text-[#F4F6F8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8]"
+                  className="rounded-sm transition-colors hover:text-[#F4F6F8] hover:underline hover:decoration-[#4B83B8] hover:underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:transition-none"
                   href={section.href}
                 >
                   {section.label}
@@ -40,7 +40,7 @@ export async function Footer() {
             ))}
             <li>
               <a
-                className="rounded-sm hover:text-[#F4F6F8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8]"
+                className="rounded-sm transition-colors hover:text-[#F4F6F8] hover:underline hover:decoration-[#4B83B8] hover:underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:transition-none"
                 href="#certifications"
               >
                 Certifications
@@ -48,7 +48,7 @@ export async function Footer() {
             </li>
             <li>
               <a
-                className="rounded-sm hover:text-[#F4F6F8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8]"
+                className="rounded-sm transition-colors hover:text-[#F4F6F8] hover:underline hover:decoration-[#4B83B8] hover:underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4B83B8] motion-reduce:transition-none"
                 href={portfolioIdentity.github}
                 target="_blank"
                 rel="noreferrer"

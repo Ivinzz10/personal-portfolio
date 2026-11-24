@@ -1,4 +1,5 @@
 import { technicalSkillGroups } from "@/content/portfolio";
+import { SectionReveal } from "@/components/section-reveal";
 
 export function Skills() {
   return (
@@ -8,7 +9,7 @@ export function Skills() {
       className="scroll-mt-20 bg-[#EAF0F6] text-[#252D38]"
     >
       <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-5 sm:py-20 md:py-24 lg:px-6">
-        <header className="mb-9 max-w-[700px] sm:mb-12">
+        <SectionReveal className="mb-9 max-w-[700px] sm:mb-12">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#234C78]">
             Skills
           </p>
@@ -18,11 +19,15 @@ export function Skills() {
           >
             Technical skills
           </h2>
-        </header>
+        </SectionReveal>
 
         <dl className="grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2 sm:gap-y-9 lg:grid-cols-3 lg:gap-x-10">
-          {technicalSkillGroups.map((group) => (
-            <div key={group.category} className="border-t border-[#234C78]/20 pt-4">
+          {technicalSkillGroups.map((group, index) => (
+            <SectionReveal
+              key={group.category}
+              className="border-t border-[#234C78]/20 pt-4"
+              delay={index * 0.1}
+            >
               <dt className="text-base font-semibold leading-6 text-[#101F35]">
                 {group.category}
               </dt>
@@ -36,7 +41,7 @@ export function Skills() {
                   </span>
                 ))}
               </dd>
-            </div>
+            </SectionReveal>
           ))}
         </dl>
       </div>

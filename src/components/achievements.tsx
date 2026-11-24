@@ -3,6 +3,7 @@ import {
   additionalAchievements,
   certifications,
 } from "@/content/portfolio";
+import { SectionReveal } from "@/components/section-reveal";
 
 export function Achievements() {
   return (
@@ -12,7 +13,7 @@ export function Achievements() {
       className="scroll-mt-20 bg-[#101F35] text-[#F4F6F8]"
     >
       <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-5 sm:py-20 md:py-24 lg:px-6">
-        <header className="mb-9 max-w-[700px] sm:mb-12">
+        <SectionReveal className="mb-9 max-w-[700px] sm:mb-12">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#F4F6F8]/80">
             Recognition and involvement
           </p>
@@ -22,14 +23,14 @@ export function Achievements() {
           >
             Achievements
           </h2>
-        </header>
+        </SectionReveal>
 
         <div className="grid gap-x-10 gap-y-7 md:grid-cols-2 md:gap-y-9">
           {achievementHighlights.map((achievement, index) => (
-            <article
-              key={achievement.title}
+            <SectionReveal key={achievement.title} delay={index * 0.1}>
+              <article
               className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 border-t-2 border-[#4B83B8] bg-[#234C78] p-5 sm:gap-x-6 sm:p-7"
-            >
+              >
               <span aria-hidden="true" className="pt-1 text-sm font-medium tracking-[0.12em] text-[#F4F6F8]/60">
                 0{index + 1}
               </span>
@@ -41,29 +42,32 @@ export function Achievements() {
                   {achievement.detail}
                 </p>
               </div>
-            </article>
+              </article>
+            </SectionReveal>
           ))}
         </div>
 
-        <ul className="mt-9 grid gap-x-10 gap-y-4 border-t border-[#F4F6F8]/20 pt-6 sm:mt-11 sm:grid-cols-2 sm:gap-y-5 sm:pt-7">
-          {additionalAchievements.map((achievement) => (
-            <li
-              key={achievement}
-              className="flex max-w-[900px] gap-3 text-sm leading-6 text-[#F4F6F8]/85 sm:text-base sm:leading-7"
-            >
-              <span
-                aria-hidden="true"
-                className="mt-[0.7em] size-1.5 shrink-0 rounded-full bg-[#4B83B8]"
-              />
-              <span>{achievement}</span>
-            </li>
-          ))}
-        </ul>
+        <SectionReveal className="mt-9" delay={0.2}>
+          <ul className="grid gap-x-10 gap-y-4 border-t border-[#F4F6F8]/20 pt-6 sm:mt-2 sm:grid-cols-2 sm:gap-y-5 sm:pt-7">
+            {additionalAchievements.map((achievement) => (
+              <li
+                key={achievement}
+                className="flex max-w-[900px] gap-3 text-sm leading-6 text-[#F4F6F8]/85 sm:text-base sm:leading-7"
+              >
+                <span
+                  aria-hidden="true"
+                  className="mt-[0.7em] size-1.5 shrink-0 rounded-full bg-[#4B83B8]"
+                />
+                <span>{achievement}</span>
+              </li>
+            ))}
+          </ul>
+        </SectionReveal>
 
+        <SectionReveal className="mt-14 border-t-2 border-[#4B83B8] bg-[#EAF0F6] px-5 py-7 text-[#252D38] sm:mt-16 sm:px-8 sm:py-9">
         <section
           id="certifications"
           aria-labelledby="certifications-title"
-          className="mt-14 border-t-2 border-[#4B83B8] bg-[#EAF0F6] px-5 py-7 text-[#252D38] sm:mt-16 sm:px-8 sm:py-9"
         >
           <header className="mb-6">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.13em] text-[#234C78]">
@@ -93,6 +97,7 @@ export function Achievements() {
             ))}
           </ul>
         </section>
+        </SectionReveal>
       </div>
     </section>
   );

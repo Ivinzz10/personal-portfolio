@@ -1,4 +1,5 @@
 import { aboutContent } from "@/content/portfolio";
+import { SectionReveal } from "@/components/section-reveal";
 
 export function About() {
   return (
@@ -8,7 +9,7 @@ export function About() {
       className="scroll-mt-20 border-b border-[#234C78]/15 bg-[#EAF0F6]"
     >
       <div className="mx-auto grid max-w-[1200px] gap-8 px-4 py-16 sm:px-5 sm:py-20 md:grid-cols-[minmax(220px,0.75fr)_minmax(0,1.25fr)] md:gap-14 md:py-24 lg:gap-20 lg:px-6">
-        <div className="border-l-2 border-[#4B83B8] pl-5 sm:pl-7">
+        <SectionReveal className="border-l-2 border-[#4B83B8] pl-5 sm:pl-7">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#234C78]">
             About
           </p>
@@ -18,9 +19,9 @@ export function About() {
           >
             Background &amp; direction
           </h2>
-        </div>
+        </SectionReveal>
 
-        <div className="max-w-[720px]">
+        <SectionReveal className="max-w-[720px]" delay={0.1}>
           <p className="max-w-[62ch] text-lg leading-8 text-[#252D38] sm:text-xl sm:leading-9">
             {aboutContent.background}
           </p>
@@ -37,7 +38,7 @@ export function About() {
               ))}
             </ul>
           </div>
-        </div>
+        </SectionReveal>
       </div>
     </section>
   );

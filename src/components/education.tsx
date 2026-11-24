@@ -1,4 +1,5 @@
 import { educationHistory } from "@/content/portfolio";
+import { SectionReveal } from "@/components/section-reveal";
 
 export function Education() {
   const [degree, ...schoolEducation] = educationHistory;
@@ -10,7 +11,7 @@ export function Education() {
       className="scroll-mt-20 border-t border-[#234C78]/10 bg-[#EAF0F6]"
     >
       <div className="mx-auto max-w-[1200px] px-4 py-16 sm:px-5 sm:py-20 md:py-24 lg:px-6">
-        <header className="mb-9 max-w-[700px] sm:mb-12">
+        <SectionReveal className="mb-9 max-w-[700px] sm:mb-12">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#234C78]">
             Education
           </p>
@@ -20,9 +21,10 @@ export function Education() {
           >
             Education
           </h2>
-        </header>
+        </SectionReveal>
 
-        <article className="border-l-2 border-[#4B83B8] bg-[#101F35] p-5 text-[#F4F6F8] sm:p-8">
+        <SectionReveal>
+          <article className="border-l-2 border-[#4B83B8] bg-[#101F35] p-5 text-[#F4F6F8] sm:p-8">
           <div className="grid gap-4 md:grid-cols-[minmax(150px,0.45fr)_minmax(0,1.55fr)] md:gap-10">
             <p className="text-sm font-medium leading-6 text-[#F4F6F8]/75">
               {degree.duration}
@@ -40,14 +42,15 @@ export function Education() {
               </p>
             </div>
           </div>
-        </article>
+          </article>
+        </SectionReveal>
 
         <div className="mt-9 grid gap-x-10 sm:mt-12 sm:grid-cols-2">
-          {schoolEducation.map((education) => (
-            <article
-              key={education.qualification}
+          {schoolEducation.map((education, index) => (
+            <SectionReveal key={education.qualification} delay={0.1 + index * 0.1}>
+              <article
               className="border-t border-[#234C78]/20 py-5 sm:py-6"
-            >
+              >
               <p className="text-sm font-medium leading-6 text-[#234C78]">
                 {education.duration}
               </p>
@@ -61,7 +64,8 @@ export function Education() {
                 <span className="font-medium text-[#252D38]">{education.resultLabel}:</span>{" "}
                 {education.result}
               </p>
-            </article>
+              </article>
+            </SectionReveal>
           ))}
         </div>
       </div>

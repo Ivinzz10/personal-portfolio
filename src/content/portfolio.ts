@@ -19,10 +19,29 @@ export const portfolioSections = [
   { label: "Contact", href: "#contact" },
 ] as const;
 
-export const professionalIntroduction = [
-  "Computer Science and Engineering graduate and Junior Software Engineer with experience developing AI-powered applications, full-stack systems, and data-driven solutions.",
-  "Currently contributing to an AI-powered content generation platform, working with Rust, LLM APIs, backend technologies, and automated content workflows.",
-  "Hands-on experience with multi-agent AI systems, machine learning, computer vision, API integration, and database management.",
+export const professionalIntroduction = {
+  opening:
+    "I'm a Computer Science and Engineering graduate and Junior Software Engineer who enjoys building intelligent, practical software solutions. My experience spans ",
+  emphasis:
+    "backend development, full-stack engineering, and AI-powered applications",
+  continuation:
+    ", with hands-on work in Rust, Python, LLMs, and modern web technologies.",
+  current:
+    "Currently, I'm contributing to an AI-powered content generation platform at 797th LLC. I'm passionate about exploring emerging technologies, solving challenging problems, and turning ideas into meaningful products.",
+} as const;
+
+export const heroCredentials = [
+  { label: "GATE 2026 Qualified", icon: "award", featured: true },
+  {
+    label: "B.Tech Computer Science and Engineering",
+    icon: "graduationCap",
+    featured: false,
+  },
+  {
+    label: "Junior Software Engineer",
+    icon: "briefcase",
+    featured: false,
+  },
 ] as const;
 
 export const aboutContent = {
