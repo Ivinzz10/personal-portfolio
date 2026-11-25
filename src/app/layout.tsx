@@ -18,6 +18,15 @@ const pageTitle = "Ivin Sunny | Junior Software Engineer | AI & Full Stack Devel
 const pageDescription =
   "Portfolio of Ivin Sunny, Junior Software Engineer and Computer Science graduate specializing in backend development, full-stack engineering, AI-powered applications, and intelligent software solutions.";
 
+const socialTitle = "Ivin Sunny | Junior Software Engineer";
+const socialDescription = "Building intelligent software and AI-powered applications.";
+const socialImage = {
+  url: "https://personal-portfolio-lovat-omega-87.vercel.app/images/og-image.png",
+  width: 1672,
+  height: 941,
+  alt: "Ivin Sunny — Junior Software Engineer",
+};
+
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
@@ -58,14 +67,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Ivin Sunny Portfolio",
-    title: pageTitle,
-    description: pageDescription,
+    title: socialTitle,
+    description: socialDescription,
     ...(siteUrl ? { url: siteUrl.href } : {}),
+    images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: pageTitle,
-    description: pageDescription,
+    title: socialTitle,
+    description: socialDescription,
+    images: { url: socialImage.url, alt: socialImage.alt },
   },
 };
 
