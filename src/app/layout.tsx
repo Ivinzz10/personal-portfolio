@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: portfolioIdentity.name }],
   creator: portfolioIdentity.name,
+  verification: { google: "nUlQcgkbHLsF5SkS9-PnP0Frcg6CnnXs-VyIMVUSPe8" },
   ...(siteUrl ? { alternates: { canonical: siteUrl.href } } : {}),
   robots: {
     index: true,
